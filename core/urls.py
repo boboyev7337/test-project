@@ -38,7 +38,7 @@ scheme = get_schema_view(
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include("testapi.urls")),
+    path('', include("testapi.urls")),
 
     # account
     path('login/', LoginView.as_view(), name="login"),

@@ -6,7 +6,7 @@ from testapi.views import (index,
                            about,
                            support)
 
-urlpatterns=[
+urlpatterns = [
     path('', index, name='index'),
     path('about/', about, name='about'),
     path('blog/', blog, name='blog'),
