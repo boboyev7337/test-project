@@ -16,6 +16,6 @@ jobs:
         run: pip install -r requirements.txt
       - name: Run test
         env:
-          DJANGO_SETTING_MODULE: test-project.setting.local
+          DJANGO_SETTING_MODULE: core.setting.local
           SECRET_KEY: django-insecure-ht4)3u=$b4a7vgiym=j)f*5l$c0-#n0ydnl_(&b(^0kpl^7+7j
         run: python manage.py test
