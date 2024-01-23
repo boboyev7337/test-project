@@ -21,6 +21,8 @@ from django.urls import path, include
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from rest_framework import permissions
+from django.conf.urls.static import static
+from django.conf import settings
 
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
@@ -55,3 +57,6 @@ urlpatterns = [
     path('swagger/', scheme.with_ui('swagger'), name='scheme-swagger-ui'),
     path('redoc/', scheme.with_ui('redoc'), name='scheme-redoc'),
 ]
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
