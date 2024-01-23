@@ -18,4 +18,10 @@ jobs:
         env:
           DJANGO_SETTINGS_MODULE: core.settings.local
           SECRET_KEY: django-insecure-ht4)3u=$b4a7vgiym=j)f*5l$c0-#n0ydnl_(&b(^0kpl^7+7j
+          SQL_ENGINE: django.db.backends.postgresql
+          SQL_DATABASE: test_project
+          SQL_USER: postgres
+          SQL_PASSWORD: 1
+          SQL_HOST: localhost
+          SQL_PORT: 5432
         run: python manage.py test
