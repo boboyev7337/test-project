@@ -1,0 +1,19 @@
+name: test-project
+on: push
+
+jobs:
+  first:
+    name: install ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update
+        run: sudo apt update
+      - name: check out repo
+        uses: actions/checkout@v3
+      - name: Install python3-pip
+        run: sudo apt install python3-pip
+      - name: Requirements install
+        run: pip intall -r requirements.txt
+      - name: Run test
+        env:
+          DJANGO_SETTING_MODULE: test-project.setting.local
