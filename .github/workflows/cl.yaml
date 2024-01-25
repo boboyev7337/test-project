@@ -1,11 +1,4 @@
 name: test-project
-on:
-  push:
-    branches:
-      -master
-  pull_request:
-    branches:
-      -master
 jobs:
   first:
     name: install ubuntu
