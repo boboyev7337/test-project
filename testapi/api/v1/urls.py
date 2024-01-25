@@ -6,10 +6,10 @@ from .views import TestViewSet, CategoryViewSet, PostViewSet
 
 router = routers.DefaultRouter()
 
-router.register(r'user', UserViewSet)
-router.register(r'test', TestViewSet)
-router.register(r'post', PostViewSet)
-router.register(r'category', CategoryViewSet)
+router.register(r'user', UserViewSet, name='user')
+router.register(r'test', TestViewSet, name='test')
+router.register(r'post', PostViewSet, name='post')
+router.register(r'category', CategoryViewSet, name='category')
 
 urlpatterns = [
 ]
